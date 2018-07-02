@@ -69,7 +69,7 @@ function makeRequests() {
             let price = parseFloat(data["body"][0]["price_usd"])
             prlWorth = price * 1545
             calculateTotalWorth()
-            move(price * 5000, "PRL")
+            move(price * 1545, "PRL")
         },
         error: function(error) {
             console.log("Error with prl ajax: " + error)
