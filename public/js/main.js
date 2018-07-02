@@ -93,7 +93,7 @@ function makeRequests() {
     });
 }
 
-var refresh = document.getElementById("click")
-
 makeRequests()
+
+document.getElementById("click").onclick = makeRequests()
 
