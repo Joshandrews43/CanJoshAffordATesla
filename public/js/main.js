@@ -28,6 +28,7 @@ function move(amount, type) {
 }
 
 function makeRequests() {
+    console.log("in makeRequests")
     $.ajax({
     	type: "POST",
     	url: "/xrp",
