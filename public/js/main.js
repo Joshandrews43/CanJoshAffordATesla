@@ -95,7 +95,7 @@ function makeRequests() {
 
 makeRequests()
 
-document.getElementById("click").onclick = function() {
+$("click").click(function(){
     makeRequests()
-}
+})
 
