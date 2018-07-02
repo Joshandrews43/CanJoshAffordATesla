@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@font-face {
+  font-family: "Tesla";
+  src: url(TESLA.ttf); }
+#click {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  font-family: "Montserrat";
+  outline: none;
+  background-color: #d73632;
+  border: none;
+  border-radius: 5px;
+  width: 6em;
+  height: auto;
+  font-size: 1.5em;
+  margin-top: 5em; }
+  #click:hover {
+    cursor: pointer; }
+
+.background {
+  opacity: .5;
+  z-index: 0;
+  position: absolute;
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.foreground {
+  width: 75%;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%); }
+
+body {
+  margin-top: 6em;
+  background: linear-gradient(black, grey);
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.prices {
+  font-family: "Tesla";
+  display: block;
+  text-align: center;
+  color: white;
+  margin-top: 3em;
+  font-size: 1.5em; }
+
+#teslaImg {
+  width: 550px;
+  margin: 5em auto 0 auto;
+  display: block; }
+
+#logo {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 6em auto 4em auto; }
+
+i {
+  text-align: center;
+  display: block;
+  font-size: 4em; }
+
+.progress {
+  width: 75%;
+  height: 3em !important;
+  background-color: white;
+  margin: 0em auto 2em auto;
+  border-style: groove;
+  border-color: black;
+  clear: both; }
+
+#XRP {
+  background-color: black;
+  width: 3%; }
+
+#XLM {
+  background-color: grey;
+  width: 3%; }
+
+#NANO {
+  background-color: green;
+  width: 3%; }
+
+#PRL {
+  background-color: blue;
+  width: 3%; }
+
+.progress-bar {
+  color: white;
+  text-align: center;
+  display: block;
+  height: 2.5em;
+  line-height: 2.2em;
+  font-size: 1em; }
+
+/*# sourceMappingURL=style.css.map */
