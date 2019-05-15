@@ -12,7 +12,7 @@ function calculateTotalWorth() {
 }
 
 function move(amount, type) {
-    var elem = document.getElementById(type); 
+    var elem = document.getElementById(type);
     var width = 1;
     var id = setInterval(frame, 20);
     function frame() {
@@ -20,7 +20,7 @@ function move(amount, type) {
         if (width >= percent) {
             clearInterval(id);
         } else {
-            width++; 
+            width++;
             elem.style.width = width + '%';
             elem.innerHTML = type + ": $" + Math.trunc(amount);
         }
@@ -36,9 +36,9 @@ function makeRequests() {
     	success: function(data) {
             console.log("Successful ajax call for xrp. Data: " + data)
             let price = parseFloat(data["body"][0]["price_usd"])
-            xrpWorth = price * 20315;
+            xrpWorth = price * 16290;
             calculateTotalWorth()
-            move(price * 20315, "XRP")
+            move(xrpWorth, "XRP")
     	},
     	error: function(error) {
     		console.log("Error with xrp ajax: " + error)
@@ -52,9 +52,9 @@ function makeRequests() {
         success: function(data) {
             console.log("Successful ajax call for xrb. Data: " + data)
             let price = parseFloat(data["body"][0]["price_usd"])
-            xrbWorth = price * 1662;
+            xrbWorth = price * 1659;
             calculateTotalWorth()
-            move(price * 1662, "NANO")
+            move(xrbWorth, "NANO")
         },
         error: function(error) {
             console.log("Error with xrb ajax: " + error)
@@ -84,9 +84,9 @@ function makeRequests() {
         success: function(data) {
             console.log("Successful ajax call for xlm. Data: " + data)
             let price = parseFloat(data["body"][0]["price_usd"])
-            xlmWorth = price * 9430;
+            xlmWorth = price * 6430;
             calculateTotalWorth()
-            move(price * 9430, "XLM")
+            move(xlmWorth, "XLM")
         },
         error: function(error) {
             console.log("Error with xlm ajax: " + error)
@@ -99,4 +99,3 @@ makeRequests()
 $("click").click(function(){
     makeRequests()
 })
-
