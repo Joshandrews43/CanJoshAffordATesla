@@ -32,9 +32,9 @@ module.exports = {
 
     const { data } = await rp(requestOptions);
     const xrp = data.find((d) => d.symbol === "XRP").quote.USD;
-    const xlm = data.find((d) => d.symbol === "XLM").quote.USD;
+    const btc = data.find((d) => d.symbol === "BTC").quote.USD;
     const xrb = data.find((d) => d.symbol === "NANO").quote.USD;
 
-    return { xrp, xlm, xrb };
+    return { xrp, btc, xrb };
   },
 };
