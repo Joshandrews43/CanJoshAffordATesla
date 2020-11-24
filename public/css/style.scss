@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700"); 
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 /*@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");*/
 
-@font-face{
+@font-face {
   font-family: "Tesla";
-  src: url(TESLA.ttf)
+  src: url(TESLA.ttf);
 }
 
-#click{
+#click {
   display: block;
   margin: 0 auto;
   color: white;
@@ -19,21 +19,21 @@
   height: auto;
   font-size: 1.5em;
   margin-top: 5em;
-    &:hover{
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.background{
-  opacity: .5;
+.background {
+  opacity: 0.5;
   z-index: 0;
   position: absolute;
   display: block;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
-.foreground{
+.foreground {
   width: 75%;
   z-index: 1;
   position: absolute;
@@ -42,14 +42,14 @@
   -webkit-transform: translateX(-50%);
 }
 
-body{
+body {
   margin-top: 6em;
   background: linear-gradient(black, grey);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.prices{
+.prices {
   font-family: "Tesla";
   display: block;
   text-align: center;
@@ -58,26 +58,26 @@ body{
   font-size: 1.5em;
 }
 
-#teslaImg{
+#teslaImg {
   width: 550px;
   margin: 5em auto 0 auto;
   display: block;
 }
 
-#logo{
+#logo {
   width: 50%;
   height: auto;
   display: block;
   margin: 6em auto 4em auto;
 }
 
-i{
+i {
   text-align: center;
   display: block;
   font-size: 4em;
 }
 
-.progress{
+.progress {
   width: 75%;
   height: 3em !important;
   background-color: white;
@@ -87,23 +87,23 @@ i{
   clear: both;
 }
 
-#XRP{
+#XRP {
   background-color: black;
-  width: 2%;  
+  width: 2%;
 }
-#TRX{
+#TRX {
   background-color: red;
-  width: 2%
+  width: 2%;
 }
 /* #PRL{
   background-color: blue;
   width: 5%;
 } */
-#XRB{
+#XRB {
   background-color: grey;
   width: 2%;
 }
-.progress-bar{
+.progress-bar {
   color: white;
   text-align: center;
   display: block;

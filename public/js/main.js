@@ -2,12 +2,11 @@
 
 var xrpWorth = 0;
 var xrbWorth = 0;
-var prlWorth = 0;
-var xlmWorth = 0;
+var btcWorth = 0;
 var totalWorth = 0;
 
 function calculateTotalWorth() {
-  totalWorth = xlmWorth + prlWorth + xrbWorth + xrpWorth;
+  totalWorth = btcWorth + xrbWorth + xrpWorth;
 }
 
 function move(amount, type) {
@@ -26,9 +25,9 @@ function move(amount, type) {
   }
 }
 
-const xrpOwned = 16920;
+const xrpOwned = 16139;
 const xrbOwned = 1659;
-const xlmOwned = 6450;
+const btcOwned = 0.0666;
 
 function makeRequests() {
   $.ajax({
@@ -37,12 +36,12 @@ function makeRequests() {
     success: function ({ prices }) {
       console.log("data in frontend", prices);
       xrpWorth = prices.xrp.price * xrpOwned;
-      xlmWorth = prices.xlm.price * xlmOwned;
+      btcWorth = prices.btc.price * btcOwned;
       xrbWorth = prices.xrb.price * xrbOwned;
       calculateTotalWorth();
       move(xrpWorth, "XRP");
       move(xrbWorth, "NANO");
-      move(xlmWorth, "XLM");
+      move(btcWorth, "BTC");
       document.getElementById("click").innerHTML = `$${totalWorth.toFixed(0)}`;
     },
     error: function (error) {
