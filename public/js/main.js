@@ -25,9 +25,9 @@ function move(amount, type) {
   }
 }
 
-const xrpOwned = 16139;
+const ethOwned = 5.214;
 const xrbOwned = 1659;
-const btcOwned = 0.0666;
+const btcOwned = 0.165;
 
 function makeRequests() {
   $.ajax({
@@ -35,11 +35,11 @@ function makeRequests() {
     url: "/xrp",
     success: function ({ prices }) {
       console.log("data in frontend", prices);
-      xrpWorth = prices.xrp.price * xrpOwned;
+      xrpWorth = prices.eth.price * ethOwned;
       btcWorth = prices.btc.price * btcOwned;
       xrbWorth = prices.xrb.price * xrbOwned;
       calculateTotalWorth();
-      move(xrpWorth, "XRP");
+      move(xrpWorth, "ETH");
       move(xrbWorth, "NANO");
       move(btcWorth, "BTC");
       document.getElementById("click").innerHTML = `$${totalWorth.toFixed(0)}`;

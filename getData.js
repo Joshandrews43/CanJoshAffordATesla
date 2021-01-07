@@ -31,10 +31,10 @@ module.exports = {
     };
 
     const { data } = await rp(requestOptions);
-    const xrp = data.find((d) => d.symbol === "XRP").quote.USD;
+    const eth = data.find((d) => d.symbol === "ETH").quote.USD;
     const btc = data.find((d) => d.symbol === "BTC").quote.USD;
     const xrb = data.find((d) => d.symbol === "NANO").quote.USD;
 
-    return { xrp, btc, xrb };
+    return { eth, btc, xrb };
   },
 };
